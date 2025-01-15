@@ -69,5 +69,6 @@
     <script src="../js/dark.js"></script>
     <script src="../js/js.js"></script>
     <script src="../js/slide.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>
