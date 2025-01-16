@@ -1,5 +1,5 @@
 <?php
-require '../controller/create.php';  
+require '../Controller/create.php';  
 ?>
 
 <!DOCTYPE html>

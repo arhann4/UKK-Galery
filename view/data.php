@@ -1,5 +1,5 @@
 <?php
-require '../model/function.php';
+require '../Model/function.php';
 
 $perPage = 10;
 
