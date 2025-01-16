@@ -31,26 +31,20 @@ function cari($like,$pk,$table){
     return $kotak;
 }
 
-function tambah($post){
+function tambah(){
     global $db_phpdasar;
     $target_dir = "../uploads/";
     $target_file = $target_dir . basename($_FILES["gambar"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    $dbImg = basename($_FILES["gambar"]["name"]);
+
+    // Pindahkan file gambar ke folder tujuan
     if (move_uploaded_file($_FILES["gambar"]["tmp_name"], $target_file)) {
-        echo "The file ". htmlspecialchars( basename( $_FILES["gambar"]["name"])). " has been uploaded.";
-    } else {
-        echo "Sorry, there was an error uploading your file.";
+        $gambar = basename($_FILES["gambar"]["name"]);
+        
+        // Query hanya menyimpan gambar
+        $query = "INSERT INTO buku (gambar) VALUES ('$gambar')";
+        mysqli_query($db_phpdasar, $query);
+
+        return mysqli_affected_rows($db_phpdasar);
     }
-    $judul = htmlspecialchars($post["judul"]);
-    $terbit = htmlspecialchars($post["deskripsi"]);
-    $gambar =$dbImg;
-    
-    $query = "INSERT INTO buku VALUES ('', '$judul', '$deskripsi', '$gambar')";
-    
-    mysqli_query($db_phpdasar, $query);
-    
-    return mysqli_affected_rows($db_phpdasar);
 }
 ?>

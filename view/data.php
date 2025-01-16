@@ -71,9 +71,8 @@ if (isset($_POST['cari'])) {
         <tr>
             <th>No.</th>
             <th>Gambar</th>
-            <th>Judul</th>
-            <th>Penulis</th>
-            <th>View</th>
+            <th>Judul Gambar</th>
+            <th>Deskripsi</th>
         </tr>
         <?php $i = 1; ?>
         <?php foreach($buku as $row) :?>
@@ -85,12 +84,7 @@ if (isset($_POST['cari'])) {
                     <?=$row["judul"]?>
                 </td>
                 <td class="penulis">
-                    <?=$row["tahun_terbit"]?>
-                </td>
-                <td>
-                    <a href="<?=$row['link']?>" target="_blank">
-                        <i class="">View</i>
-                    </a>
+                    <?=$row["deskripsi"]?>
                 </td>
 
             </tr>

@@ -1,3 +1,7 @@
+<?php
+require '../Model/function.php';
+$buku = query("SELECT * FROM buku"); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,17 +58,14 @@
         </div>
     </div>
         <hr class="break-page">
-            <div class="grid-container">
-            <div class="image-frame"><img src="../img/img.jpg" alt=""></div>
-            <div class="image-frame"><img src="../img/img2.jpg" alt=""></div>
-            <div class="image-frame"><img src="../img/kota.jpg" alt=""></div>
-            <div class="image-frame"><img src="../img/img3.jpg" alt=""></div>
-            <div class="image-frame"><img src="../img/img.jpg" alt=""></div>
-            <div class="image-frame"><img src="../img/img2.jpg" alt=""></div>
-            <div class="image-frame"><img src="../img/img2.jpg" alt=""></div>
-            <div class="image-frame"><img src="../img/img3.jpg" alt=""></div>
-            <div class="image-frame"><img src="../img/img3.jpg" alt=""></div>
+      <div class="image-gallery">
+        <?php foreach($buku as $row) : ?>
+            <div class="image-item">
+                <img src="../uploads/<?= $row['gambar'] ?>" alt="Gambar Buku" class="img">
+            </div>
+        <?php endforeach; ?>
     </div>
+     <hr class="break-page">
 
         <div class="a">
 
