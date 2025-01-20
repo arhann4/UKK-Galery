@@ -20,7 +20,7 @@ $buku = query("SELECT * FROM buku");
         <nav  id="nav-menu">
             <ul>
                 <li><a href="javascript:void(0);" id="scrollToTop">Home</a></li>
-                <li><a href="data.php">kntol</a></li>
+                <li><a href="data.php">km</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="login.php">Sign In</a></li>
             </ul>
