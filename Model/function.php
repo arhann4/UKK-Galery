@@ -44,7 +44,7 @@ function tambah($post){
         echo "Sorry, there was an error uploading your file.";
     }
     $judul = htmlspecialchars($post["judul"]);
-    $terbit = htmlspecialchars($post["deskripsi"]);
+    $deskripsi = htmlspecialchars($post["deskripsi"]);
     $gambar =$dbImg;
     
     $query = "INSERT INTO buku VALUES ('', '$judul', '$deskripsi', '$gambar')";
