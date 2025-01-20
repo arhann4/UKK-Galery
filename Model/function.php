@@ -44,11 +44,10 @@ function tambah($post){
         echo "Sorry, there was an error uploading your file.";
     }
     $judul = htmlspecialchars($post["judul"]);
-    $terbit = htmlspecialchars($post["tahun_terbit"]);
-    $link = htmlspecialchars($post["link"]);
+    $deskripsi = htmlspecialchars($post["deskripsi"]);
     $gambar =$dbImg;
     
-    $query = "INSERT INTO buku VALUES ('', '$judul', '$terbit', '$link', '$gambar')";
+    $query = "INSERT INTO buku VALUES ('', '$judul', '$deskripsi', '$gambar')";
     
     mysqli_query($db_phpdasar, $query);
     
