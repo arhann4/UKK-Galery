@@ -7,7 +7,7 @@ $buku = query("SELECT * FROM buku");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arhann</title>
+    <title>Galery Foto</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon"  href="img/x.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
