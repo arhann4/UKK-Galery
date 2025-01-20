@@ -16,7 +16,6 @@ $buku = query("SELECT * FROM buku");
 </head>
 <body>
     <header class="navbar navbar-default">
-        <!-- Menu Navigasi -->
         <nav  id="nav-menu">
             <ul>
                 <li><a href="javascript:void(0);" id="scrollToTop">Home</a></li>
@@ -28,9 +27,9 @@ $buku = query("SELECT * FROM buku");
     </header>   
    <div class="carousel">
         <div class="Text">
-            <h1 class="moving-text">TRAVEL AND</h1>
-            <h1 class="moving-text">ENJOY YOUR</h1>
-            <h1 class="moving-text">HOLIDAY</h1>
+            <h1 class="moving-text">WELCOME TO</h1>
+            <h1 class="moving-text">GALLERY</h1>
+            <h1 class="moving-text">DASHBOARD</h1>
         </div>
    </div>
    <div class="container-fluid container-right">
