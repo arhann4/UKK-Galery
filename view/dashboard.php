@@ -27,6 +27,8 @@
             <h1 class="moving-text">TRAVEL AND</h1>
             <h1 class="moving-text">ENJOY YOUR</h1>
             <h1 class="moving-text">HOLIDAY</h1>
+            <h1 class="moving-text">HOLIDAY</h1>
+            <h1 class="moving-text">HOLIDAY</h1>
         </div>
    </div>
    <div class="container-fluid container-right">
