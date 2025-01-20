@@ -16,7 +16,6 @@ $buku = query("SELECT * FROM buku");
 </head>
 <body>
     <header class="navbar navbar-default">
-        <!-- Menu Navigasi -->
         <nav  id="nav-menu">
             <ul>
                 <li><a href="javascript:void(0);" id="scrollToTop">Home</a></li>
