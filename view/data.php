@@ -86,6 +86,7 @@ if (isset($_POST['cari'])) {
                 <td class="penulis">
                     <?=$row["deskripsi"]?>
                 </td>
+               
 
             </tr>
         <?php $i++; ?>
