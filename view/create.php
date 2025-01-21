@@ -19,12 +19,8 @@ require '../Controller/create.php';
                 <input type="text" name="judul" id="judul" required>
             </li>
             <li>
-                <label for="tahun_terbit"> Penulis :</label>
-                <input type="text" name="tahun_terbit" id="tahun_terbit" required>
-            </li>
-            <li>
-                <label for="link"> Link :</label>
-                <input type="text" name="link" id="link" required>
+                <label for="deskripsi"> deskripsi :</label>
+                <input type="text" name="deskripsi" id="deskripsi" required>
             </li>
             <li>
                 <label for="gambar"> Gambar :</label>

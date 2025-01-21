@@ -19,7 +19,7 @@ if (isset($_POST['cari'])) {
     $offset = ($page - 1) * $perPage;
 } else {
     // Hitung total jumlah buku di database
-    $totalBooks = mysqli_num_rows(mysqli_query($db_phpdasar, "SELECT * FROM buku"));
+    $totalBooks = mysqli_num_rows(mysqli_query($db_ukkgalery, "SELECT * FROM buku"));
     $totalPages = ceil($totalBooks / $perPage);
 
     // Tentukan halaman saat ini (default: halaman 1)
