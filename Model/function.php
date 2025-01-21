@@ -1,9 +1,9 @@
 <?php
-$db_phpdasar = mysqli_connect("localhost", "root", "", "phpdasar");
+$db_ukkgalery = mysqli_connect("localhost", "root", "", "ukkgalery");
 
 function query($query){
-    global $db_phpdasar;
-    $result = mysqli_query($db_phpdasar,$query);
+    global $db_ukkgalery;
+    $result = mysqli_query($db_ukkgalery,$query);
     $kotak =[];
     while($row = mysqli_fetch_assoc($result)){
         $kotak[] = $row;
@@ -12,8 +12,8 @@ function query($query){
 }
 
 function select($table){
-    global $db_phpdasar;
-    $result = mysqli_query($db_phpdasar,"SELECT * FROM  $table");
+    global $db_ukkgalery;
+    $result = mysqli_query($db_ukkgalery,"SELECT * FROM  $table");
     $kotak =[];
     while($row = mysqli_fetch_assoc($result)){
         $kotak[] = $row;
@@ -22,8 +22,8 @@ function select($table){
 }
 
 function cari($like,$pk,$table){
-    global $db_phpdasar;
-    $result = mysqli_query($db_phpdasar,"SELECT * FROM $table WHERE $pk LIKE '%$like%'");
+    global $db_ukkgalery;
+    $result = mysqli_query($db_ukkgalery,"SELECT * FROM $table WHERE $pk LIKE '%$like%'");
     $kotak =[];
     while($row = mysqli_fetch_assoc($result)){
         $kotak[] = $row;
@@ -32,7 +32,7 @@ function cari($like,$pk,$table){
 }
 
 function tambah($post){
-    global $db_phpdasar;
+    global $db_ukkgalery;
     $target_dir = "../uploads/";
     $target_file = $target_dir . basename($_FILES["gambar"]["name"]);
     $uploadOk = 1;
@@ -49,8 +49,8 @@ function tambah($post){
     
     $query = "INSERT INTO buku VALUES ('', '$judul', '$deskripsi', '$gambar')";
     
-    mysqli_query($db_phpdasar, $query);
+    mysqli_query($db_ukkgalery, $query);
     
-    return mysqli_affected_rows($db_phpdasar);
+    return mysqli_affected_rows($db_ukkgalery);
 }
 ?>
