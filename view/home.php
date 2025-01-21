@@ -163,10 +163,21 @@ $buku = query("SELECT * FROM buku");
             </div>
         </div>
 
-        <div class="button">
-            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+
+</head>
+<body>
+    
+
+<div class="slider-container">
+    <div class="slider-wrapper">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+
+    <button class="slider-arrow prev">&#8592;</button>
+    <button class="slider-arrow next">&#8594;</button>
+</div>
 
     </div>
     <button id="toggle-dark-mode" aria-label="Toggle Dark Mode">
