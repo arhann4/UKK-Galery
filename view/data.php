@@ -73,6 +73,7 @@ if (isset($_POST['cari'])) {
             <th>Gambar</th>
             <th>Judul Gambar</th>
             <th>Deskripsi</th>
+            <th>Aksi</th>
         </tr>
         <?php $i = 1; ?>
         <?php foreach($buku as $row) :?>
@@ -86,7 +87,13 @@ if (isset($_POST['cari'])) {
                 <td class="penulis">
                     <?=$row["deskripsi"]?>
                 </td>
+<<<<<<< HEAD
                
+=======
+                <td class="s">
+                    <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                </td>
+>>>>>>> 0de806ffa06ecb4f4c544db7fa5946b0a18cfd93
 
             </tr>
         <?php $i++; ?>
