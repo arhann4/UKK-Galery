@@ -88,8 +88,12 @@ if (isset($_POST['cari'])) {
                     <?=$row["deskripsi"]?>
                 </td>
 
-                <td class="s">
-                    <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                <td class="action-icons">
+                    <a href="update.php"><i class="fas fa-edit"></i></a>
+                    <form action="" method="POST">
+                        <input type="hidden" name="id" value="<?= $row["id"]?>">
+                        <button type="submit" name="hapus"><i class="fas fa-trash"></i></button>
+                    </form>
                 </td>
 
             </tr>
