@@ -555,6 +555,9 @@ hr .horizontal-line{
 }
 
 .button button {
+    position: relative;
+    left: 45%;
+    bottom: 40%;
     width: 40px;
     height: 35px;
     border-radius: 8px;
@@ -568,6 +571,7 @@ hr .horizontal-line{
     background: #ababab;
     color: #fff;
 }
+
 
 /* Untuk tablet dan perangkat kecil */
 @media (max-width: 768px) {
