@@ -1,5 +1,5 @@
 <?php
-require '../model/function.php'; 
+require '../Model/function.php'; 
 $id = $_GET['id']; 
 $buku = query("SELECT * FROM buku WHERE id = $id")[0]; // Ambil data berdasarkan ID
 if(isset($_POST["submit"])){
