@@ -41,7 +41,7 @@ if (isset($_POST['cari'])) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <link rel="stylesheet" href="../css/data.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <title>Home</title>
+    <title>User</title>
 </head>
 <body>
     <header class="navbar navbar-default">
@@ -57,8 +57,8 @@ if (isset($_POST['cari'])) {
     </header>
 
 
-    <h1>Daftar Buku</h1>
-    <a href="create.php" class="btn">Tambah Data</a>
+    <h1>Daftar Foto</h1>
+    <a href="create.php" class="btn">Upload Foto</a>
     <div class="search-container">
      <form method="post" action="">
         <input type="text" name="like" class="search-input" placeholder="Search...">
@@ -73,23 +73,24 @@ if (isset($_POST['cari'])) {
             <th>Gambar</th>
             <th>Judul Gambar</th>
             <th>Deskripsi</th>
-            <th>Aksi</th>
+            <th>Action</th>
         </tr>
         <?php $i = 1; ?>
         <?php foreach($buku as $row) :?>
             <tr>
                 <th><?= $i;?></th>
                 <td>
-                    <img src="../uploads/<?= $row['gambar']?>" alt="" class="img"></td>
+                    <img src="../uploads/<?= $row['gambar']?>" alt="" class="img">
+                </td>
                 <td class="judul">
                     <?=$row["judul"]?>
                 </td>
                 <td class="penulis">
                     <?=$row["deskripsi"]?>
                 </td>
-
-                <td class="s">
-                    <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                <td class="action-icons">
+                    <a href="update.php?id=<?= $row ['id']?>"><i class="fas fa-edit"></i></a>
+                    <a href="../Controller/hapus.php?id=<?= $row['id']?>"onclick="return confirm('Apakah kamu yakin untuk menghapusnya?');"><i class="fas fa-trash"></i></a>
                 </td>
 
             </tr>
