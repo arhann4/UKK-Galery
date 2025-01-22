@@ -85,7 +85,7 @@ if (isset($_POST['cari'])) {
                 <td class="judul">
                     <?=$row["judul"]?>
                 </td>
-                <td class="penulis">
+                <td class="deskripsi">
                     <?=$row["deskripsi"]?>
                 </td>
 
