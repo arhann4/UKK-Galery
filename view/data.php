@@ -88,6 +88,7 @@ if (isset($_POST['cari'])) {
                 <td class="penulis">
                     <?=$row["deskripsi"]?>
                 </td>
+
                 <td class="action-icons">
                     <a href="update.php?id=<?= $row ['id']?>"><i class="fas fa-edit"></i></a>
                     <a href="../Controller/hapus.php?id=<?= $row['id']?>"onclick="return confirm('Apakah kamu yakin untuk menghapusnya?');"><i class="fas fa-trash"></i></a>
