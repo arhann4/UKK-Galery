@@ -45,7 +45,6 @@ function tambah($post){
     }
     $judul = htmlspecialchars($post["judul"]);
     $deskripsi = htmlspecialchars($post["deskripsi"]);
-   
     $gambar =$dbImg;
     
     $query = "INSERT INTO buku VALUES ('', '$judul', '$deskripsi', '$gambar')";
@@ -54,6 +53,34 @@ function tambah($post){
     
     return mysqli_affected_rows($db_ukkgalery);
 }
+function hapus($id){
+    global $db_ukkgalery;
+    $id = intval($id);
+
+    mysqli_query($db_ukkgalery, "DELETE FROM buku WHERE id=$id");
+
+    return mysqli_affected_rows($db_ukkgalery);
+}
+
+function update($data) {
+    global $db_ukkgalery;
+
+    // Ambil data dari $_POST
+    $id = $data['id'];
+    $judul = htmlspecialchars($data['judul']);
+    $deskripsi = htmlspecialchars($data['deskripsi']); 
+
+    // Query Update
+    $query = "UPDATE buku SET 
+                judul = '$judul', 
+                deskripsi = '$deskripsi'
+              WHERE id = $id";
+
+    mysqli_query($db_ukkgalery, $query);
+
+    return mysqli_affected_rows($db_ukkgalery); 
+}
+
 
 
 ?>
