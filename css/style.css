@@ -554,18 +554,82 @@ hr .horizontal-line{
     }
 }
 
-.button button {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .slider-container {
     position: relative;
-    left: 45%;
-    bottom: 40%;
-    width: 40px;
-    height: 35px;
-    border-radius: 8px;
+    width: 20%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .slide:nth-child(1) {
+    background-image: url('https://via.placeholder.com/900x400/ff7f7f/333333?text=Slide+1');
+  }
+
+  .slide:nth-child(2) {
+    background-image: url('https://via.placeholder.com/900x400/7f7fff/333333?text=Slide+2');
+  }
+
+  .slide:nth-child(3) {
+    background-image: url('https://via.placeholder.com/900x400/7fff7f/333333?text=Slide+3');
+  }
+
+      /* Tombol Navigasi Modern */
+  .slider-arrow {
+    position: absolute;
+    bottom: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Transparan gelap */
     border: none;
+    color: white;
+    border-radius: 30%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    margin: 0 5px;
-    transition: 0.3s;
-}
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .slider-arrow:hover {
+    background: rgba(255, 255, 255, 0.8); /* Warna terang saat hover */
+    color: black;
+    transform: translateY(-5px); /* Animasi melayang */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .slider-arrow:active {
+    transform: scale(0.95); /* Efek tekan */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .slider-arrow.prev {
+    left: 20%;
+  }
+
+  .slider-arrow.next {
+    right: 20%;
+  }
 
 .button button:hover {
     background: #ababab;
